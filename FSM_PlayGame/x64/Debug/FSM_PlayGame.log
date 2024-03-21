@@ -1,4 +1,6 @@
 ﻿  Player.cpp
   PlayerStates.cpp
+  WinMain.cpp
   Generating Code...
+     Creating library D:\VGP332\x64\Debug\FSM_PlayGame.lib and object D:\VGP332\x64\Debug\FSM_PlayGame.exp
   FSM_PlayGame.vcxproj -> D:\VGP332\x64\Debug\FSM_PlayGame.exe
