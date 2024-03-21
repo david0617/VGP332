@@ -8,3 +8,7 @@
 #include "BFS.h"
 #include "DFS.h"
 #include "Dijkstra.h"
+
+// FSM
+#include "State.h"
+#include "StateMachine.h"
