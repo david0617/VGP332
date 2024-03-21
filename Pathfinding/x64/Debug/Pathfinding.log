@@ -1,0 +1,8 @@
+﻿  TileMap.cpp
+D:\VGP332\Pathfinding\TileMap.cpp(258,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\VGP332\Pathfinding\TileMap.cpp(259,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\VGP332\Pathfinding\TileMap.cpp(265,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\VGP332\Pathfinding\TileMap.cpp(266,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\VGP332\Pathfinding\TileMap.cpp(273,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\VGP332\Pathfinding\TileMap.cpp(274,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Pathfinding.vcxproj -> D:\VGP332\x64\Debug\Pathfinding.exe

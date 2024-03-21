@@ -1,0 +1,9 @@
+﻿  AStar.cpp
+  BFS.cpp
+D:\VGP332\AI\Src\BFS.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  DFS.cpp
+D:\VGP332\AI\Src\DFS.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Dijkstra.cpp
+  GridBasedGragh.cpp
+  Generating Code...
+  AI.vcxproj -> D:\VGP332\x64\Debug\AI.lib
