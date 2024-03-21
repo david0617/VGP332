@@ -54,9 +54,6 @@
     <ClInclude Include="Inc\State.h">
       <Filter>Inc\FSM</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\AIWorld.h">
-      <Filter>Inc</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\SeekBehavior.h">
       <Filter>Inc\Steering</Filter>
     </ClInclude>
@@ -70,6 +67,21 @@
       <Filter>Inc\Steering</Filter>
     </ClInclude>
     <ClInclude Include="Inc\Agent.h">
+      <Filter>Inc\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\WanderBehavior.h">
+      <Filter>Inc\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\PursuitBehavior.h">
+      <Filter>Inc\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\EvadeBehavior.h">
+      <Filter>Inc\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AIWorld.h">
+      <Filter>Inc\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GroupBehavior.h">
       <Filter>Inc\Steering</Filter>
     </ClInclude>
   </ItemGroup>
@@ -102,6 +114,18 @@
       <Filter>Src\Steering</Filter>
     </ClCompile>
     <ClCompile Include="Src\SeekBehavior.cpp">
+      <Filter>Src\Steering</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WanderBehavior.cpp">
+      <Filter>Src\Steering</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\PursuitBehavior.cpp">
+      <Filter>Src\Steering</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\EvadeBehavior.cpp">
+      <Filter>Src\Steering</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GroupBehavior.cpp">
       <Filter>Src\Steering</Filter>
     </ClCompile>
   </ItemGroup>

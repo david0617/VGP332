@@ -1,2 +1,3 @@
-﻿  SteeringModule.cpp
+﻿  GroupBehavior.cpp
+D:\VGP332\AI\Inc\Entity.h(26,47): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
   AI.vcxproj -> D:\VGP332\x64\Debug\AI.lib
