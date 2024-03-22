@@ -22,6 +22,12 @@
     <Filter Include="Src\Steering">
       <UniqueIdentifier>{085ea5a8-2932-4150-89c8-f042eccc41ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Inc\Perception">
+      <UniqueIdentifier>{2e2d587a-d42a-48f0-8e49-0dff9e43209c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Perception">
+      <UniqueIdentifier>{97334be4-6803-442b-bac0-356ba55d4a9b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Inc\AI.h">
@@ -45,9 +51,6 @@
     <ClInclude Include="Inc\Dijkstra.h">
       <Filter>Inc\Pathing</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\GridBasedGragh.h">
-      <Filter>Inc\Pathing</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\StateMachine.h">
       <Filter>Inc\FSM</Filter>
     </ClInclude>
@@ -63,12 +66,6 @@
     <ClInclude Include="Inc\SteeringModule.h">
       <Filter>Inc\Steering</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\Entity.h">
-      <Filter>Inc\Steering</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\Agent.h">
-      <Filter>Inc\Steering</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\WanderBehavior.h">
       <Filter>Inc\Steering</Filter>
     </ClInclude>
@@ -78,11 +75,29 @@
     <ClInclude Include="Inc\EvadeBehavior.h">
       <Filter>Inc\Steering</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\AIWorld.h">
-      <Filter>Inc\Steering</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\GroupBehavior.h">
       <Filter>Inc\Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\MemoryRecord.h">
+      <Filter>Inc\Perception</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AIWorld.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Agent.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GridBasedGragh.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Entity.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Sensor.h">
+      <Filter>Inc\Perception</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\PerceptionModule.h">
+      <Filter>Inc\Perception</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -104,12 +119,6 @@
     <ClCompile Include="Src\GridBasedGragh.cpp">
       <Filter>Src\Pathing</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Entity.cpp">
-      <Filter>Src\Steering</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\AIWorld.cpp">
-      <Filter>Src\Steering</Filter>
-    </ClCompile>
     <ClCompile Include="Src\SteeringModule.cpp">
       <Filter>Src\Steering</Filter>
     </ClCompile>
@@ -127,6 +136,15 @@
     </ClCompile>
     <ClCompile Include="Src\GroupBehavior.cpp">
       <Filter>Src\Steering</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AIWorld.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Entity.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\PerceptionModule.cpp">
+      <Filter>Src\Perception</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

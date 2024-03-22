@@ -23,6 +23,18 @@ public:
     void SetPursuit(bool active);
     void SetEvade(bool active);
     void SetSeparation(bool active);
+    void SetAlignment(bool active);
+    void SetCohesion(bool active);
+
+    void SetSeekWeight(float weight);
+    void SetFleeWeight(float weight);
+    void SetArriveWeight(float weight);
+    void SetWanderWeight(float weight);
+    void SetPursuitWeight(float weight);
+    void SetEvadeWeight(float weight);
+    void SetSeparationWeight(float weight);
+    void SetAlignmentWeight(float weight);
+    void SetCohesionWeight(float weight);
 
 private:
     std::unique_ptr<AI::SteeringModule> mSteeringModule;
@@ -33,6 +45,8 @@ private:
     AI::PursuitBehavior* mPursuitBehavior = nullptr;
     AI::EvadeBehavior* mEvadeBehavior = nullptr;
     AI::SeparationBehavior* mSeparationBehavior = nullptr;
+    AI::AlignmentBehavior* mAlignmentBehavior = nullptr;
+    AI::CohesionBehavior* mCohesionBehavior = nullptr;
 
     std::array<X::TextureId, 16> mTextureIds;
 };

@@ -1,5 +1,6 @@
 #include "Precompiled.h"
 #include "SteeringModule.h"
+#include "Agent.h"
 
 using namespace AI;
 
@@ -17,6 +18,16 @@ X::Math::Vector2 AI::SteeringModule::Calculate()
         {
             totalForce += behavior->Calculate(mAgent) * behavior->GetWeight();
         }
+    }
+    
+    float totalForceSqr = X::Math::MagnitudeSqr(totalForce);
+    if (totalForceSqr > mAgent.maxSpeed * mAgent.maxSpeed)
+    {
+        totalForce = X::Math::Normalize(totalForce) * mAgent.maxSpeed;
+    }
+    else if (totalForceSqr <= 1.0f)
+    {
+        totalForce = -mAgent.velocity;
     }
 
     return totalForce;

@@ -18,11 +18,16 @@
 #include "StateMachine.h"
 
 //Steering
+#include "EvadeBehavior.h"
+#include "GroupBehavior.h"
+#include "PursuitBehavior.h"
+#include "SeekBehavior.h"
 #include "SteeringBehavior.h"
 #include "SteeringModule.h"
-#include "SeekBehavior.h"
 #include "WanderBehavior.h"
-#include "PursuitBehavior.h"
-#include "EvadeBehavior.h"
 
-#include "GroupBehavior.h"
+
+// preception
+#include "MemoryRecord.h"
+#include "PerceptionModule.h"
+#include "Sensor.h"
