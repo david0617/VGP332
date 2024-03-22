@@ -25,10 +25,10 @@ float weightSeparation = 1.0f;
 float weightAlignment = 1.0f;
 float weightCohesion = 1.0f;
 
-float wanderJitter = 5.0f;
-float wanderRadius = 20.0f;
-float wanderDistance = 50.0f;
 float radius = 50.0f;
+
+float viewRange = 300.0f;
+float viewAngle = 45.0f;
 
 void SpawnAgent()
 {
@@ -67,6 +67,17 @@ void GameInit()
 		auto& mineral = minerals.emplace_back(std::make_unique<Mineral>(aiWorld));
 		mineral->Initialize();
 	}
+
+	aiWorld.AddObstacle({ 230.f, 300.f, 50.0f });
+
+	X::Math::Vector2 topLeft(500.0f, 100.0f);
+	X::Math::Vector2 topRight(600.0f, 100.0f);
+	X::Math::Vector2 bottomLeft(500.0f, 600.0f);
+	X::Math::Vector2 bottomRight(600.0f, 600.0f);
+	aiWorld.AddWall({ topLeft, topRight });
+	aiWorld.AddWall({ topRight, bottomRight });
+	aiWorld.AddWall({ topLeft, bottomLeft });
+	aiWorld.AddWall({ bottomLeft, bottomRight });
 }
 
 bool GameLoop(float deltaTime)
@@ -161,6 +172,11 @@ bool GameLoop(float deltaTime)
 				agent->SetCohesionWeight(weightCohesion);
 			}
 		}
+		if (ImGui::CollapsingHeader("VisualSensor", ImGuiTreeNodeFlags_DefaultOpen))
+		{
+			ImGui::DragFloat("ViewRange", &viewRange, 1.0f, 100.0f, 1000.0f);
+			ImGui::DragFloat("ViewAngle", &viewAngle, 1.0f, 1.0f, 360.0f);
+		}
 	}
 	ImGui::End();
 
@@ -205,6 +221,18 @@ bool GameLoop(float deltaTime)
 		mineral->Render();
 	}
 
+	const AIWorld::Obstacles& obstacles = aiWorld.GetObstacles();
+	for (const X::Math::Circle& obstacle : obstacles)
+	{
+		X::DrawScreenCircle(obstacle.center, obstacle.radius, X::Colors::Gray);
+	}
+
+	const AIWorld::Walls& walls = aiWorld.GetWalls();
+	for (const X::Math::LineSegment& wall : walls)
+	{
+		X::DrawScreenLine(wall.from, wall.to, X::Colors::Gray);
+	}
+
 	const bool quit = X::IsKeyPressed(X::Keys::ESCAPE);
 	return quit;
 }
@@ -216,7 +244,12 @@ void GameCleanup()
 		agent->Unload();
 		agent.reset();
 	}
+	for (auto& mineral : minerals)
+	{
+		mineral.reset();
+	}
 	scvAgents.clear();
+	minerals.clear();
 }
 
 //--------------------------------------------------

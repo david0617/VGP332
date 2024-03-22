@@ -1,101 +1,10 @@
-﻿  SCV.cpp
-D:\VGP332\AI\Inc\Entity.h(26,47): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,47): error C2664: 'std::unique_ptr<AI::Sensor,std::default_delete<AI::Sensor>>::unique_ptr<SensorType,std::default_delete<SensorType>,0>(std::unique_ptr<SensorType,std::default_delete<SensorType>> &&) noexcept': cannot convert argument 1 from '_Ty' to 'std::unique_ptr<SensorType,std::default_delete<SensorType>> &&'
-          with
-          [
-              SensorType=VisualSensor
-          ]
-          and
-          [
-              _Ty=std::unique_ptr<VisualSensor,std::default_delete<VisualSensor>> (__cdecl &)(void)
-          ]
-          and
-          [
-              SensorType=VisualSensor
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(707,1): message : Reason: cannot convert from '_Ty' to 'std::unique_ptr<SensorType,std::default_delete<SensorType>>'
-          with
-          [
-              _Ty=std::unique_ptr<VisualSensor,std::default_delete<VisualSensor>> (__cdecl &)(void)
-          ]
-          and
-          [
-              SensorType=VisualSensor
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(707,1): message : No constructor could take the source type, or constructor overload resolution was ambiguous
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(3195,5): message : see declaration of 'std::unique_ptr<AI::Sensor,std::default_delete<AI::Sensor>>::unique_ptr'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(721): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,std::unique_ptr<SensorType,std::default_delete<SensorType>>(__cdecl &)(void)>(_Alloc &,_Objty *const ,std::unique_ptr<SensorType,std::default_delete<SensorType>> (__cdecl &)(void))' being compiled
-          with
-          [
-              _Alloc=std::allocator<std::unique_ptr<AI::Sensor,std::default_delete<AI::Sensor>>>,
-              _Ty=std::unique_ptr<AI::Sensor,std::default_delete<AI::Sensor>>,
-              SensorType=VisualSensor,
-              _Objty=std::unique_ptr<AI::Sensor,std::default_delete<AI::Sensor>>
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(726): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,std::unique_ptr<SensorType,std::default_delete<SensorType>>(__cdecl &)(void)>(_Alloc &,_Objty *const ,std::unique_ptr<SensorType,std::default_delete<SensorType>> (__cdecl &)(void))' being compiled
-          with
-          [
-              _Alloc=std::allocator<std::unique_ptr<AI::Sensor,std::default_delete<AI::Sensor>>>,
-              _Ty=std::unique_ptr<AI::Sensor,std::default_delete<AI::Sensor>>,
-              SensorType=VisualSensor,
-              _Objty=std::unique_ptr<AI::Sensor,std::default_delete<AI::Sensor>>
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(739): message : see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<std::unique_ptr<SensorType,std::default_delete<SensorType>>(__cdecl &)(void)>(std::unique_ptr<SensorType,std::default_delete<SensorType>> (__cdecl &)(void))' being compiled
-          with
-          [
-              _Ty=std::unique_ptr<AI::Sensor,std::default_delete<AI::Sensor>>,
-              SensorType=VisualSensor
-          ]
-D:\VGP332\AI\Inc\PerceptionModule.h(21): message : see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::emplace_back<std::unique_ptr<SensorType,std::default_delete<SensorType>>(__cdecl &)(void)>(std::unique_ptr<SensorType,std::default_delete<SensorType>> (__cdecl &)(void))' being compiled
-          with
-          [
-              _Ty=std::unique_ptr<AI::Sensor,std::default_delete<AI::Sensor>>,
-              SensorType=VisualSensor
-          ]
-D:\VGP332\Perception\SCV.cpp(28): message : see reference to function template instantiation 'SensorType *AI::PerceptionModule::AddSensor<VisualSensor>(void)' being compiled
-          with
-          [
-              SensorType=VisualSensor
-          ]
+﻿  Mineral.cpp
+  SCV.cpp
   VisualSensor.cpp
-D:\VGP332\AI\Inc\Entity.h(26,47): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
-D:\VGP332\Perception\VisualSensor.cpp(25,63): warning C4390: ';': empty controlled statement found; is this the intent?
   WinMain.cpp
-D:\VGP332\AI\Inc\Entity.h(26,47): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
-D:\VGP332\Perception\WinMain.cpp(49,45): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
-D:\VGP332\Perception\WinMain.cpp(49,26): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
-D:\VGP332\Perception\WinMain.cpp(50,47): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
-D:\VGP332\Perception\WinMain.cpp(50,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
-D:\VGP332\Perception\WinMain.cpp(58,9): error C2039: 'SetFlee': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(59,9): error C2039: 'SetArrive': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(60,9): error C2039: 'SetWander': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(61,9): error C2039: 'SetPursuit': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(62,9): error C2039: 'SetEvade': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(82,9): error C2039: 'SetWander': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(131,12): error C2039: 'SetFlee': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(139,12): error C2039: 'SetFleeWeight': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(147,12): error C2039: 'SetArrive': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(155,12): error C2039: 'SetArriveWeight': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(163,12): error C2039: 'SetWander': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(171,12): error C2039: 'SetWanderWeight': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(188,12): error C2039: 'SetPursuit': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(196,12): error C2039: 'SetPursuitWeight': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(204,12): error C2039: 'SetEvade': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
-D:\VGP332\Perception\WinMain.cpp(212,12): error C2039: 'SetEvadeWeight': is not a member of 'SCV'
-D:\VGP332\Perception\SCV.h(7): message : see declaration of 'SCV'
+D:\VGP332\Perception\WinMain.cpp(38,45): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+D:\VGP332\Perception\WinMain.cpp(38,26): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+D:\VGP332\Perception\WinMain.cpp(39,47): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+D:\VGP332\Perception\WinMain.cpp(39,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
   Generating Code...
+  Perception.vcxproj -> D:\VGP332\x64\Debug\Perception.exe

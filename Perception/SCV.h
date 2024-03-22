@@ -38,6 +38,7 @@ private:
     AI::CohesionBehavior* mCohesionBehavior = nullptr;
 
     VisualSensor* mVisualSensor = nullptr;
+    VisualSensor* mVisualSensor2 = nullptr;
 
     std::array<X::TextureId, 16> mTextureIds;
 };

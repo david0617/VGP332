@@ -2,10 +2,10 @@
 
 using namespace AI;
 
-void VisualSensor::Update(AI::Agent& agent, AI::MemoryRecords& memory, float deltaTime)
+void VisualSensor::Update(Agent& agent, MemoryRecords& memory, float deltaTime)
 {
     const float viewRangeSqr = viewRange * viewRange;
-    const EntityPtrs entities = agent.world.GetEntitys();
+    const EntityPtrs entities = agent.world.GetEntities();
     for (const Entity* entity : entities)
     {
         // ignore self
@@ -22,7 +22,7 @@ void VisualSensor::Update(AI::Agent& agent, AI::MemoryRecords& memory, float del
 
         // check if target is in view distance
         X::Math::Vector2 posToTarget = entity->position - agent.position;
-        if (X::Math::MagnitudeSqr(posToTarget) > viewRangeSqr);
+        if (X::Math::MagnitudeSqr(posToTarget) > viewRangeSqr)
         {
             continue;
         }
@@ -36,8 +36,13 @@ void VisualSensor::Update(AI::Agent& agent, AI::MemoryRecords& memory, float del
             continue;
         }
 
-        // line of Sight
-        // ====================
+        // line of sight
+        X::Math::LineSegment lineToTarget(agent.position, entity->position);
+        if (!agent.world.HasLineOfSight(lineToTarget))
+        {
+            X::DrawScreenLine(agent.position, entity->position, X::Colors::Red);
+            continue;
+        }
 
         // have I seen this before
         auto iter = std::find_if(memory.begin(), memory.end(),
@@ -59,14 +64,14 @@ void VisualSensor::Update(AI::Agent& agent, AI::MemoryRecords& memory, float del
             newRecord.properties["type"] = static_cast<int>(entity->GetTypeId());
             newRecord.lastRecordedTime = X::GetTime();
         }
-
-        // debug infor
-        X::Math::Vector2 fovStart = X::Math::Rotate(agent.heading * viewRange, -viewHalfAngle);
-        X::Math::Vector2 fovEnd = X::Math::Rotate(agent.heading* viewRange, viewHalfAngle);
-        X::DrawScreenLine(agent.position, agent.position + fovStart, X::Colors::Cyan);
-        X::DrawScreenLine(agent.position, agent.position + fovEnd, X::Colors::Cyan);
-
-        float angle = atan2(agent.heading.y, agent.heading.x);
-        X::DrawScreenArc(agent.position, viewRange, angle - viewHalfAngle, angle + viewHalfAngle, X::Colors::Cyan);
     }
+
+    // debug info
+    X::Math::Vector2 fovStart = X::Math::Rotate(agent.heading * viewRange, -viewHalfAngle);
+    X::Math::Vector2 fovEnd = X::Math::Rotate(agent.heading * viewRange, viewHalfAngle);
+    X::DrawScreenLine(agent.position, agent.position + fovStart, X::Colors::Cyan);
+    X::DrawScreenLine(agent.position, agent.position + fovEnd, X::Colors::Cyan);
+
+    float angle = atan2(agent.heading.y, agent.heading.x);
+    X::DrawScreenArc(agent.position, viewRange, angle - viewHalfAngle, angle + viewHalfAngle, X::Colors::Cyan);
 }
