@@ -15,7 +15,7 @@ namespace AI
         T GetProperty(const std::string& key, T defaultValue = T()) const
         {
             const auto iter = properties.find(key);
-            if (iter == properties.end)
+            if (iter == properties.end())
             {
                 return defaultValue;
             }
