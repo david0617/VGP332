@@ -4,10 +4,12 @@
     <ClCompile Include="SCV.cpp" />
     <ClCompile Include="WinMain.cpp" />
     <ClCompile Include="Mineral.cpp" />
+    <ClCompile Include="VisualSensor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SCV.h" />
     <ClInclude Include="TypeId.h" />
     <ClInclude Include="Mineral.h" />
+    <ClInclude Include="VisualSensor.h" />
   </ItemGroup>
 </Project>

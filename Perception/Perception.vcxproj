@@ -145,12 +145,14 @@
   <ItemGroup>
     <ClCompile Include="Mineral.cpp" />
     <ClCompile Include="SCV.cpp" />
+    <ClCompile Include="VisualSensor.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mineral.h" />
     <ClInclude Include="SCV.h" />
     <ClInclude Include="TypeId.h" />
+    <ClInclude Include="VisualSensor.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AI\AI.vcxproj">

@@ -2,6 +2,8 @@
 
 #include "TypeId.h"
 
+#include "VisualSensor.h"
+
 extern float wanderJitter;
 extern float wanderRadius;
 extern float wanderDistance;
@@ -23,13 +25,11 @@ void SCV::Load()
 {
     mPerceptionModule = std::make_unique<AI::PerceptionModule>(*this, ComputeImportance);
     mPerceptionModule->SetMemorySpan(2.0f);
+    mVisualSensor = mPerceptionModule->AddSensor<VisualSensor>();
+    mVisualSensor->targetType = AgentType::Mineral;
+
     mSteeringModule = std::make_unique<AI::SteeringModule>(*this);
     mSeekBehavior = mSteeringModule->AddBehavior<AI::SeekBehavior>();
-    mFleeBehavior = mSteeringModule->AddBehavior<AI::FleeBehavior>();
-    mArriveBehavior = mSteeringModule->AddBehavior<AI::ArriveBehavior>();
-    mWanderBehavior = mSteeringModule->AddBehavior<AI::WanderBehavior>();
-    mPursuitBehavior = mSteeringModule->AddBehavior<AI::PursuitBehavior>();
-    mEvadeBehavior = mSteeringModule->AddBehavior<AI::EvadeBehavior>();
     mSeparationBehavior = mSteeringModule->AddBehavior<AI::SeparationBehavior>();
     mAlignmentBehavior= mSteeringModule->AddBehavior<AI::AlignmentBehavior>();
     mCohesionBehavior= mSteeringModule->AddBehavior<AI::CohesionBehavior>();
@@ -54,11 +54,6 @@ void SCV::Unload()
 void SCV::Update(float deltaTime)
 {
     mPerceptionModule->Update(deltaTime);
-
-    if (mWanderBehavior != nullptr)
-    {
-        mWanderBehavior->Setup(wanderRadius, wanderDistance, wanderJitter);
-    }
 
     const X::Math::Vector2 force = mSteeringModule->Calculate();
     const X::Math::Vector2 acceleration = force / mass;
@@ -88,6 +83,16 @@ void SCV::Update(float deltaTime)
     {
         position.y -= screenHeight;
     }
+
+    const auto& memoryRecords = mPerceptionModule->GetMemoryRecords();
+    for (auto& memory : memoryRecords)
+    {
+        X::Math::Vector2 pos = memory.GetProperty<X::Math::Vector2>("lastSeenPosition");
+        X::DrawScreenLine(position, pos, X::Colors::White);
+
+        std::string score = std::to_string(memory.importance);
+        X::DrawScreenText(score.c_str(), pos.x, pos.y, 12.0f, X::Colors::White);
+    }
 }
 
 void SCV::Render()
@@ -101,11 +106,6 @@ void SCV::Render()
 void SCV::ShowDebug(bool debug)
 {
     mSeekBehavior->ShowDebug(debug);
-    mFleeBehavior->ShowDebug(debug);
-    mArriveBehavior->ShowDebug(debug);
-    mWanderBehavior->ShowDebug(debug);
-    mPursuitBehavior->ShowDebug(debug);
-    mEvadeBehavior->ShowDebug(debug);
     mSeparationBehavior->ShowDebug(debug);
     mAlignmentBehavior->ShowDebug(debug);
     mCohesionBehavior->ShowDebug(debug);
@@ -114,31 +114,6 @@ void SCV::ShowDebug(bool debug)
 void SCV::SetSeek(bool active)
 {
     mSeekBehavior->SetActive(active);
-}
-
-void SCV::SetFlee(bool active)
-{
-    mFleeBehavior->SetActive(active);
-}
-
-void SCV::SetArrive(bool active)
-{
-    mArriveBehavior->SetActive(active);
-}
-
-void SCV::SetWander(bool active)
-{
-    mWanderBehavior->SetActive(active);
-}
-
-void SCV::SetPursuit(bool active)
-{
-    mPursuitBehavior->SetActive(active);
-}
-
-void SCV::SetEvade(bool active)
-{
-    mEvadeBehavior->SetActive(active);
 }
 
 void SCV::SetSeparation(bool active)
@@ -158,31 +133,6 @@ void SCV::SetCohesion(bool active)
 void SCV::SetSeekWeight(float weight)
 {
     mSeekBehavior->SetWeight(weight);
-}
-
-void SCV::SetFleeWeight(float weight)
-{
-    mFleeBehavior->SetWeight(weight);
-}
-
-void SCV::SetArriveWeight(float weight)
-{
-    mArriveBehavior->SetWeight(weight);
-}
-
-void SCV::SetWanderWeight(float weight)
-{
-    mWanderBehavior->SetWeight(weight);
-}
-
-void SCV::SetPursuitWeight(float weight)
-{
-    mPursuitBehavior->SetWeight(weight);
-}
-
-void SCV::SetEvadeWeight(float weight)
-{
-    mEvadeBehavior->SetWeight(weight);
 }
 
 void SCV::SetSeparationWeight(float weight)
