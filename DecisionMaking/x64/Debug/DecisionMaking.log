@@ -1,0 +1,20 @@
+﻿  GoalMoveToPosition.cpp
+  GoalSeekToPosition.cpp
+  GoalWander.cpp
+  Raven.cpp
+D:\VGP332\DecisionMaking\Raven.cpp(69,48): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+D:\VGP332\DecisionMaking\Raven.cpp(69,29): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+D:\VGP332\DecisionMaking\Raven.cpp(70,50): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+D:\VGP332\DecisionMaking\Raven.cpp(70,30): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+  RavenStrategy.cpp
+  WinMain.cpp
+D:\VGP332\DecisionMaking\WinMain.cpp(45,45): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+D:\VGP332\DecisionMaking\WinMain.cpp(45,26): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+D:\VGP332\DecisionMaking\WinMain.cpp(46,47): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+D:\VGP332\DecisionMaking\WinMain.cpp(46,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+D:\VGP332\DecisionMaking\WinMain.cpp(72,45): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+D:\VGP332\DecisionMaking\WinMain.cpp(72,26): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+D:\VGP332\DecisionMaking\WinMain.cpp(73,47): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+D:\VGP332\DecisionMaking\WinMain.cpp(73,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+  Generating Code...
+  DecisionMaking.vcxproj -> D:\VGP332\x64\Debug\DecisionMaking.exe

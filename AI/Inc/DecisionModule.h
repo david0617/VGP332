@@ -40,7 +40,7 @@ namespace AI
     private:
         void Arbitrate()
         {
-            StrategyType& bestStrategy = nullptr;
+            StrategyType* bestStrategy = nullptr;
             float mostDesirable = 0.0f;
 
             for (auto& straregy : mStrategies)
@@ -71,6 +71,5 @@ namespace AI
         StrategyType* mCurrentStrategy = nullptr;
         std::unique_ptr<GoalType> mCurrentGoal = nullptr;
         AgentType& mAgent;
-
     };
 }
