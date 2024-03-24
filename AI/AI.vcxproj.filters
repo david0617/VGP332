@@ -28,6 +28,12 @@
     <Filter Include="Src\Perception">
       <UniqueIdentifier>{97334be4-6803-442b-bac0-356ba55d4a9b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Inc\GoalDecision">
+      <UniqueIdentifier>{baf01c53-97c9-4026-9f37-1e578ede598b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\GoalDecision">
+      <UniqueIdentifier>{2b3c9fdb-40f0-4e89-80b7-1f8007f23311}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Inc\AI.h">
@@ -98,6 +104,18 @@
     </ClInclude>
     <ClInclude Include="Inc\PerceptionModule.h">
       <Filter>Inc\Perception</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Goal.h">
+      <Filter>Inc\GoalDecision</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GoalComposite.h">
+      <Filter>Inc\GoalDecision</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\DecisionModule.h">
+      <Filter>Inc\GoalDecision</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Strategy.h">
+      <Filter>Inc\GoalDecision</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -165,10 +165,13 @@
     <ClInclude Include="Inc\AStar.h" />
     <ClInclude Include="Inc\BFS.h" />
     <ClInclude Include="Inc\Common.h" />
+    <ClInclude Include="Inc\DecisionModule.h" />
     <ClInclude Include="Inc\DFS.h" />
     <ClInclude Include="Inc\Dijkstra.h" />
     <ClInclude Include="Inc\Entity.h" />
     <ClInclude Include="Inc\EvadeBehavior.h" />
+    <ClInclude Include="Inc\Goal.h" />
+    <ClInclude Include="Inc\GoalComposite.h" />
     <ClInclude Include="Inc\GridBasedGragh.h" />
     <ClInclude Include="Inc\GroupBehavior.h" />
     <ClInclude Include="Inc\MemoryRecord.h" />
@@ -180,6 +183,7 @@
     <ClInclude Include="Inc\StateMachine.h" />
     <ClInclude Include="Inc\SteeringBehavior.h" />
     <ClInclude Include="Inc\SteeringModule.h" />
+    <ClInclude Include="Inc\Strategy.h" />
     <ClInclude Include="Inc\WanderBehavior.h" />
     <ClInclude Include="Src\Precompiled.h" />
   </ItemGroup>

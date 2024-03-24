@@ -7,4 +7,5 @@ D:\VGP332\Perception\WinMain.cpp(38,26): warning C4244: 'initializing': conversi
 D:\VGP332\Perception\WinMain.cpp(39,47): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
 D:\VGP332\Perception\WinMain.cpp(39,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
   Generating Code...
+     Creating library D:\VGP332\x64\Debug\Perception.lib and object D:\VGP332\x64\Debug\Perception.exp
   Perception.vcxproj -> D:\VGP332\x64\Debug\Perception.exe
