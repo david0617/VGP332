@@ -16,7 +16,9 @@ public:
     void Terminate(Raven& agent) override;
 
     void SetDestination(const X::Math::Vector2& destination);
+    void SetDestinationRange(float range);
 
 private:
+    float mDestinationRange = 10.0f;
     X::Math::Vector2 mDestination;
 };

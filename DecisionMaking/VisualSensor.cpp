@@ -1,5 +1,7 @@
 #include "VisualSensor.h"
 
+#include "Mineral.h"
+
 using namespace AI;
 
 void VisualSensor::Update(Agent& agent, MemoryRecords& memory, float deltaTime)
@@ -55,6 +57,11 @@ void VisualSensor::Update(Agent& agent, MemoryRecords& memory, float deltaTime)
         {
             iter->properties["lastSeenPosition"] = entity->position;
             iter->lastRecordedTime = X::GetTime();
+            if (entity->GetTypeId() == static_cast<uint32_t>(AgentType::Mineral))
+            {
+                const Mineral* mineral = static_cast<const Mineral*>(entity);
+                iter->properties["Health"] = mineral->GetHealth();
+            }
         }
         else
         {
@@ -63,6 +70,11 @@ void VisualSensor::Update(Agent& agent, MemoryRecords& memory, float deltaTime)
             newRecord.properties["lastSeenPosition"] = entity->position;
             newRecord.properties["type"] = static_cast<int>(entity->GetTypeId());
             newRecord.lastRecordedTime = X::GetTime();
+            if (entity->GetTypeId() == static_cast<uint32_t>(AgentType::Mineral))
+            {
+                const Mineral* mineral = static_cast<const Mineral*>(entity);
+                newRecord.properties["health"] = mineral->GetHealth();
+            }
         }
     }
 

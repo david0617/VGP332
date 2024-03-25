@@ -10,6 +10,10 @@
     <ClCompile Include="GoalSeekToPosition.cpp" />
     <ClCompile Include="GoalMoveToPosition.cpp" />
     <ClCompile Include="RavenStrategy.cpp" />
+    <ClCompile Include="RavenHuntStrategy.cpp" />
+    <ClCompile Include="GoalArriveAtPosition.cpp" />
+    <ClCompile Include="RavenGoToMineralStrategy.cpp" />
+    <ClCompile Include="GoalHarvestMineral.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SCV.h" />
@@ -21,5 +25,9 @@
     <ClInclude Include="GoalSeekToPosition.h" />
     <ClInclude Include="GoalMoveToPosition.h" />
     <ClInclude Include="RavenStrategy.h" />
+    <ClInclude Include="RavenHuntStrategy.h" />
+    <ClInclude Include="GoalArriveAtPosition.h" />
+    <ClInclude Include="RavenGoToMineralStrategy.h" />
+    <ClInclude Include="GoalHarvestMineral.h" />
   </ItemGroup>
 </Project>
