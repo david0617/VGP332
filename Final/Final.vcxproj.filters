@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="TileMap.cpp">
+      <Filter>TileMap</Filter>
+    </ClCompile>
+    <ClCompile Include="Mineral.cpp" />
+    <ClCompile Include="SCV.cpp" />
+    <ClCompile Include="VisualSensor.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="GoalArriveAtPosition.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="GoalHarvestMineral.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="GoalMoveToPosition.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="GoalSeekToPosition.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="GoalWander.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="Raven.cpp">
+      <Filter>Raven</Filter>
+    </ClCompile>
+    <ClCompile Include="RavenGoToMineralStrategy.cpp">
+      <Filter>Raven</Filter>
+    </ClCompile>
+    <ClCompile Include="RavenHarvestStrategy.cpp">
+      <Filter>Raven</Filter>
+    </ClCompile>
+    <ClCompile Include="RavenHuntStrategy.cpp">
+      <Filter>Raven</Filter>
+    </ClCompile>
+    <ClCompile Include="RavenStrategy.cpp">
+      <Filter>Raven</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TileMap.h">
+      <Filter>TileMap</Filter>
+    </ClInclude>
+    <ClInclude Include="Mineral.h" />
+    <ClInclude Include="SCV.h" />
+    <ClInclude Include="TypeId.h" />
+    <ClInclude Include="VisualSensor.h" />
+    <ClInclude Include="GoalArriveAtPosition.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="GoalHarvestMineral.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="GoalMoveToPosition.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="GoalSeekToPosition.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="GoalWander.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="Raven.h">
+      <Filter>Raven</Filter>
+    </ClInclude>
+    <ClInclude Include="RavenGoToMineralStrategy.h">
+      <Filter>Raven</Filter>
+    </ClInclude>
+    <ClInclude Include="RavenHarvestStrategy.h">
+      <Filter>Raven</Filter>
+    </ClInclude>
+    <ClInclude Include="RavenHuntStrategy.h">
+      <Filter>Raven</Filter>
+    </ClInclude>
+    <ClInclude Include="RavenStrategy.h">
+      <Filter>Raven</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Goal">
+      <UniqueIdentifier>{3243c632-1ef9-4ec9-9517-b72ff0c5a8cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Raven">
+      <UniqueIdentifier>{c785e28a-38c9-4530-a77a-c8d1f7ebde71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TileMap">
+      <UniqueIdentifier>{308295be-6a6d-47db-9abf-3814e8b05444}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="map.txt">
+      <Filter>TileMap</Filter>
+    </Text>
+    <Text Include="tiles.txt">
+      <Filter>TileMap</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

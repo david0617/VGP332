@@ -69,9 +69,9 @@ void Raven::Load()
     mVisualSensor->targetType = AgentType::Mineral;
 
     mSteeringModule = std::make_unique<AI::SteeringModule>(*this);
-    mSeekBehavior = mSteeringModule->AddBehavior<AI::SeekBehavior>();
     mArriveBehavior = mSteeringModule->AddBehavior<AI::ArriveBehavior>();
     mWanderBehavior = mSteeringModule->AddBehavior<AI::WanderBehavior>();
+    mSeekBehavior = mSteeringModule->AddBehavior<AI::SeekBehavior>();
 
     mDecisionModule = std::make_unique<AI::DecisionModule<Raven>>(*this);
     mDecisionModule->AddStrategy<RavenHuntStrategy>();
@@ -152,14 +152,9 @@ void Raven::Render()
 
 void Raven::ShowDebug(bool debug)
 {
-    mSeekBehavior->ShowDebug(debug);
     mArriveBehavior->ShowDebug(debug);
     mWanderBehavior->ShowDebug(debug);
-}
-
-void Raven::SetSeek(bool active)
-{
-    mSeekBehavior->SetActive(active);
+    mSeekBehavior->ShowDebug(debug);
 }
 
 void Raven::SetArrive(bool active)
@@ -170,6 +165,11 @@ void Raven::SetArrive(bool active)
 void Raven::SetWander(bool active)
 {
     mWanderBehavior->SetActive(active);
+}
+
+void Raven::SetSeek(bool active)
+{
+    mSeekBehavior->SetActive(active);
 }
 
 void Raven::SetTargetDestination(const X::Math::Vector2& targetDestination)
