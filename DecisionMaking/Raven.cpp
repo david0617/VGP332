@@ -6,6 +6,7 @@
 #include "RavenStrategy.h"
 #include "RavenHuntStrategy.h"
 #include "RavenGoToMineralStrategy.h"
+#include "RavenHarvestStrategy.h"
 
 extern float wanderJitter;
 extern float wanderRadius;
@@ -74,6 +75,7 @@ void Raven::Load()
 
     mDecisionModule = std::make_unique<AI::DecisionModule<Raven>>(*this);
     mDecisionModule->AddStrategy<RavenHuntStrategy>();
+    mDecisionModule->AddStrategy<RavenHarvestStrategy>();
     auto strategy = mDecisionModule->AddStrategy<RavenGoToMineralStrategy>();
     strategy->SetPerception(mPerceptionModule.get());
 

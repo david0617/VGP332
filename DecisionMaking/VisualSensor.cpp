@@ -60,7 +60,7 @@ void VisualSensor::Update(Agent& agent, MemoryRecords& memory, float deltaTime)
             if (entity->GetTypeId() == static_cast<uint32_t>(AgentType::Mineral))
             {
                 const Mineral* mineral = static_cast<const Mineral*>(entity);
-                iter->properties["Health"] = mineral->GetHealth();
+                iter->properties["health"] = mineral->GetHealth();
             }
         }
         else

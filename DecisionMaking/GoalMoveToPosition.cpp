@@ -14,7 +14,7 @@ void GoalMoveToPosition::Activate(Raven& agent)
     RemoveAllSubGoal(agent);
     float distanceSqr = X::Math::DistanceSqr(agent.position, mDestination);
     float seekDistance = 200.0f;
-    if (distanceSqr > 10.0f)
+    if (distanceSqr > 25.0f)
     {
         GoalArriveAtPosition* arrive = AddSubGoal<GoalArriveAtPosition>();
         arrive->SetDestination(mDestination);

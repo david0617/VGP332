@@ -288,6 +288,20 @@ bool GameLoop(float deltaTime)
 	{
 		agent->Render();
 	}
+
+	auto iter = minerals.begin();
+	while (iter != minerals.cend())
+	{
+		if (iter->get()->GetHealth() == 0)
+		{
+			iter->reset();
+			iter = minerals.erase(iter);
+		}
+		else
+		{
+			++iter;
+		}
+	}
 	for (auto& mineral : minerals)
 	{
 		mineral->Render();

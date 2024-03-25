@@ -15,7 +15,7 @@ void GoalArriveAtPosition::Activate(Raven& agent)
 GoalArriveAtPosition::Status GoalArriveAtPosition::Process(Raven& agent)
 {
     ActivateIfInactive(agent);
-    if (X::Math::DistanceSqr(agent.position, mDestination) < 10.0f)
+    if (X::Math::DistanceSqr(agent.position, mDestination) < 25.0f)
     {
         mStatus = GoalArriveAtPosition::Status::Completed;
     }

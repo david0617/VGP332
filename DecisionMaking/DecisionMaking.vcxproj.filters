@@ -14,6 +14,7 @@
     <ClCompile Include="GoalArriveAtPosition.cpp" />
     <ClCompile Include="RavenGoToMineralStrategy.cpp" />
     <ClCompile Include="GoalHarvestMineral.cpp" />
+    <ClCompile Include="RavenHarvestStrategy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SCV.h" />
@@ -29,5 +30,6 @@
     <ClInclude Include="GoalArriveAtPosition.h" />
     <ClInclude Include="RavenGoToMineralStrategy.h" />
     <ClInclude Include="GoalHarvestMineral.h" />
+    <ClInclude Include="RavenHarvestStrategy.h" />
   </ItemGroup>
 </Project>
